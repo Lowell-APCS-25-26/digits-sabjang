@@ -17,7 +17,7 @@ public class DigitsTest {
         for (int test : tests) {
             digits = new Digits(test);
 
-            for (int i = 0; i < digits.digits.size(); i++) {
+            for (int i = digits.digits.size()-1; i >= 0 ; i--) {
                 assertEquals(digits.digits.get(i).intValue(), test % 10);
                 test /= 10;
             }
